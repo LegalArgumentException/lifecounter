@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.washington.tg71223.lifecounter.MainActivity"
+    android:orientation="vertical">
+
+    <!-- First Grouping Of Players -->
+    <LinearLayout
+        android:id="@+id/group1"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="45">
+
+        <RelativeLayout
+            android:id="@+id/player1"
+            android:tag="player1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@drawable/border">
+
+            <TextView
+                android:text="@string/life_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="39dp"
+                android:id="@+id/player1life"
+                tools:text="@string/life_total"
+                android:textSize="30dp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center" />
+
+            <Button
+                android:text="-1"
+                android:tag="-1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/p1p1button"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/p1m1button"
+                android:onClick="changeLife"
+                tools:text="-1" />
+
+            <Button
+                android:text="+5"
+                android:tag="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/p1p1button"
+                android:layout_alignRight="@+id/p1p1button"
+                android:layout_alignEnd="@+id/p1p1button"
+                android:layout_marginTop="30dp"
+                android:id="@+id/p1p5button"
+                android:onClick="changeLife"
+                tools:text="+5" />
+
+            <Button
+                android:text="-5"
+                android:tag="-5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/p1p5button"
+                android:layout_alignLeft="@+id/p1m1button"
+                android:layout_alignStart="@+id/p1m1button"
+                android:id="@+id/p1m5button"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="+1"
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/p1p1button"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="normal|bold"
+                android:onClick="changeLife" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/player2"
+            android:tag="player2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@drawable/border">
+
+            <TextView
+                android:text="@string/life_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="39dp"
+                android:id="@+id/player2life"
+                android:textStyle="normal|bold"
+                tools:text="@string/life_total"
+                android:textSize="30dp" />
+
+            <Button
+                android:text="+1"
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button12"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                tools:text="+1"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="-1"
+                android:tag="-1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button13"
+                android:layout_alignBaseline="@+id/button12"
+                android:layout_alignBottom="@+id/button12"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                tools:text="-1"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="+5"
+
+                android:tag="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button14"
+                android:layout_marginTop="29dp"
+                android:layout_below="@+id/button12"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                tools:text="+5"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="-5"
+                android:tag="-5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button15"
+                android:layout_alignBaseline="@+id/button14"
+                android:layout_alignBottom="@+id/button14"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                tools:text="-5"
+                android:onClick="changeLife" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Second Grouping Of Players -->
+    <LinearLayout
+        android:id="@+id/group2"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_weight="45">
+
+        <RelativeLayout
+            android:id="@+id/player3"
+            android:tag="player3"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@drawable/border">
+
+            <TextView
+                android:text="@string/life_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="39dp"
+                android:id="@+id/player3life"
+                android:textSize="30dp"
+                tools:text="@string/life_total"
+                android:textStyle="normal|bold" />
+
+            <Button
+                android:text="+1"
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button16"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                tools:text="+1"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="-1"
+                android:tag="-1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button17"
+                android:layout_alignBaseline="@+id/button16"
+                android:layout_alignBottom="@+id/button16"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                tools:text="-1"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="+5"
+                android:tag="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button19"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/button16"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                tools:text="+5"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="-5"
+                android:tag="-5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/button19"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/button20"
+                tools:text="-5"
+                android:onClick="changeLife" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/player4"
+            android:tag="player4"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:background="@drawable/border">
+
+            <TextView
+                android:text="@string/life_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:id="@+id/player4life"
+                tools:text="@string/life_total"
+                android:textSize="30dp"
+                android:textStyle="normal|bold"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:text="+1"
+                android:tag="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button21"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                tools:text="+1"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="-1"
+                android:tag="-1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button22"
+                android:layout_alignBaseline="@+id/button21"
+                android:layout_alignBottom="@+id/button21"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                tools:text="-1"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="+5"
+                android:tag="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button23"
+                android:layout_below="@+id/button21"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                tools:text="+5"
+                android:onClick="changeLife" />
+
+            <Button
+                android:text="-5"
+                android:tag="-5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button24"
+                android:layout_alignBaseline="@+id/button23"
+                android:layout_alignBottom="@+id/button23"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                tools:text="-5"
+                android:onClick="changeLife" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Which Player Just Lost Message -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:id="@+id/message" />
+
+</LinearLayout>

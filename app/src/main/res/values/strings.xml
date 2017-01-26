@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">lifecounter</string>
+    <string name="life_total">20</string>
+</resources>
